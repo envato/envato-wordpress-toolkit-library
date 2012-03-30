@@ -1,0 +1,21 @@
+/*
+
+Theme Name: Dummy Theme
+Theme URI: http://denonstudio.net
+Description: This is a dummy theme for testing Envato Theme Upgrader
+Version: 1.0
+Author: DENONSTUDIO
+Author URI: http://codecanyon.net/user/denonstudio
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Tags: dummy, envato, codecanyon, wordpress
+
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Alfa+Slab+One);
+
+* { padding: 0; margin: 0; }
+body {  background: #FFDE00; }
+#wrap { width: 800px; margin: 350px auto 0 auto; text-align: center; }
+#wrap h1 { font-size: 30pt; font-family: 'Alfa Slab One', arial, san-serif; text-transform: uppercase; color: #FFF; text-shadow: 0px 0px 10px #000; }
