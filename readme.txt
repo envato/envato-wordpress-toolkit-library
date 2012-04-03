@@ -11,7 +11,7 @@ WordPress Toolkit Library for Envato Marketplace hosted items.
 
 This is an example theme to demonstrate usage of the Envato WordPress Toolkit Library. This library is intended for ThemeForest authors to integrate with their WordPress themes, providing automatic update functionality.
 
-Currently this library makes the following functionalities:
+Currently this library provides the following functionalities:
 
 * Checks for theme updates on the ThemeForest marketplace
 * Upgrades the theme to its latest version
