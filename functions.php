@@ -5,7 +5,7 @@ add_action('admin_init', 'on_admin_init');
 function on_admin_init()
 {
     // include the library
-    include_once('envato-wordpress-theme-upgrader/class-envato-wordpress-theme-upgrader.php');
+    include_once('envato-wordpress-toolkit-library/class-envato-wordpress-theme-upgrader.php');
     
     $upgrader = new Envato_WordPress_Theme_Upgrader( 'denonstudio', 'xxxxxxxav7hny3p1ptm7xxxxxxxx' );
     
