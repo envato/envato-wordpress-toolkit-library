@@ -16,7 +16,7 @@ function on_admin_init()
     // $upgrader->check_for_theme_update(); 
 
     /*
-     *  Uncomment to updated the current theme
+     *  Uncomment to update the current theme
      */
     
     // $upgrader->upgrade_theme();
