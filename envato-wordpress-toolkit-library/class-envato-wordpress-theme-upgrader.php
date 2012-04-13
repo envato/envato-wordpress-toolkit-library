@@ -45,14 +45,18 @@ if ( class_exists( 'Theme_Upgrader' ) && ! class_exists( 'Envato_WordPress_Theme
          * @since   1.0
          * @access  public
          *
-         * @param   string        (optional) Name of the theme. If not set checks for updates for the current theme
-         * @return  array         A stdClass object.
+         * @param   string        Name of the theme. If not set checks for updates for the current theme. Default ''.
+         * @param   bool          Allow API calls to be cached. Default true.
+         * @return  object        A stdClass object.
          */ 
-        public function check_for_theme_update( $theme_name = '' ) 
+        public function check_for_theme_update( $theme_name = '', $allow_cache = true ) 
         {
             $result           = new stdClass();
-            $purchased_themes = $this->api->wp_list_themes();
-      
+            $purchased_themes = $this->api->wp_list_themes( $allow_cache );
+
+                print_r($this->api->api_errors());
+
+            
             if ( $errors = $this->api->api_errors() ) 
             {
                 $result->errors = array();
@@ -80,10 +84,11 @@ if ( class_exists( 'Theme_Upgrader' ) && ! class_exists( 'Envato_WordPress_Theme
          * @since   1.0
          * @access  public
          *
-         * @param   string        (optional) Name of the theme. If not set upgrades the current theme.
-         * @return  array         A stdClass object.
+         * @param   string        Name of the theme. If not set checks for updates for the current theme. Default ''.
+         * @param   bool          Allow API calls to be cached. Default true.
+         * @return  object        A stdClass object.
          */ 
-        public function upgrade_theme( $theme_name = '' ) 
+        public function upgrade_theme( $theme_name = '', $allow_cache = true ) 
         {
             $result          = new stdClass();
             $result->success = false;
@@ -99,7 +104,7 @@ if ( class_exists( 'Theme_Upgrader' ) && ! class_exists( 'Envato_WordPress_Theme
                 return $result;  
             }
 
-            $purchased_themes = $this->api->wp_list_themes();
+            $purchased_themes = $this->api->wp_list_themes( $allow_cache );
             $marketplace_theme_data = null;
 
             if ( $errors = $this->api->api_errors() ) 
