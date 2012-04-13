@@ -54,9 +54,6 @@ if ( class_exists( 'Theme_Upgrader' ) && ! class_exists( 'Envato_WordPress_Theme
             $result           = new stdClass();
             $purchased_themes = $this->api->wp_list_themes( $allow_cache );
 
-                print_r($this->api->api_errors());
-
-            
             if ( $errors = $this->api->api_errors() ) 
             {
                 $result->errors = array();
