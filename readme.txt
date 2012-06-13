@@ -1,9 +1,9 @@
 === Envato Wordpress Toolkit Library ===
-Contributors: Arman Mirkazemi, Derek Herman
+Contributors: Arman Mirkazemi, Derek Herman, Japh Thomson
 Tags: update, envato, theme, api, toolkit
 Requires at least: 3.0
 Tested up to: 3.3.1
-Stable tag: 1.1
+Stable tag: 1.2
 
 WordPress Toolkit Library for Envato Marketplace hosted items.
 
@@ -27,6 +27,10 @@ See Installation notes for further instructions.
 5. Your theme should now be able to check for updates and update itself!
 
 == Changelog ==
+
+= 1.2 =
+* Changed use of cURL to the WordPress HTTP API
+* Removed ini_set usage
 
 = 1.1 =
 * Imported Derek's changes to the API class to support caching of API results
