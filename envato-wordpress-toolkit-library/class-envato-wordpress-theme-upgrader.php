@@ -261,7 +261,7 @@ if ( class_exists( 'Theme_Upgrader' ) && ! class_exists( 'Envato_WordPress_Theme
         {
             if ((int)ini_get("max_execution_time") <  ETU_MAX_EXECUTION_TIME)
             {
-                ini_set("max_execution_time", ETU_MAX_EXECUTION_TIME);
+                set_time_limit( ETU_MAX_EXECUTION_TIME );
             }
 
             $r['timeout'] = ETU_MAX_EXECUTION_TIME;
