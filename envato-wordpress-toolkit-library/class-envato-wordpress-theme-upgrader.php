@@ -38,7 +38,7 @@ if ( class_exists( 'Theme_Upgrader' ) && ! class_exists( 'Envato_WordPress_Theme
             $this->installation_feedback = array();
             $this->username              = $username;
             $this->api_key               = $api_key;
-            $this->api                   = &new Envato_Protected_API( $this->username, $this->api_key );
+            $this->api                   = new Envato_Protected_API( $this->username, $this->api_key );
         }
         
         /**
