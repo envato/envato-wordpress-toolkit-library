@@ -65,7 +65,7 @@ if ( class_exists( 'Theme_Upgrader' ) && ! class_exists( 'Envato_WordPress_Theme
             }
             
             if ( empty($theme_name) ) {
-                $theme_name = get_current_theme();
+                $theme_name = function_exists( 'wp_get_theme' ) ? wp_get_theme()->Name : get_current_theme();
             }
             
             $purchased_themes             = $this->filter_purchased_themes_by_name($purchased_themes, $theme_name);
